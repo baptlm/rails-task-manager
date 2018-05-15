@@ -1,0 +1,26 @@
+<div class="container">
+  <h1> My tasks</h1>
+  <table>
+  <% @tasks.each do |task| %>
+    <tr>
+        <td>
+          <%= link_to task.title, task_path(task)  %>
+        </td>
+        <td>
+          <%= link_to "Delete", delete_task_path(task), method: :delete, class: 'btn btn-warning' %>
+        </td>
+        <td>
+          <%= link_to "Edit", delete_task_path(task), class: 'btn btn-warning' %>
+        </td>
+        <td>
+          <%= link_to "See details", delete_task_path(task), class: 'btn btn-warning' %>
+        </td>
+    </tr>
+  <% end %>
+  </table>
+
+  <%= link_to "Create a new task", '/tasks/new', class: 'btn btn-primary' %>
+</div>
+
+
+

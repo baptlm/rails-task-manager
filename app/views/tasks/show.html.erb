@@ -1,0 +1,11 @@
+<h1> Detail </h1>
+<ul>
+  <li> Title - <%= @task.title %></li>
+  <li> Details - <%= @task.details %></li>
+  <li> Completed - <%= @task.completed %></li>
+</ul>
+
+
+<%= link_to "Edit", "/tasks/#{@task.id}/edit" %>
+<%= link_to "Home", '/tasks' %>
+
